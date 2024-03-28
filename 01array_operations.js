@@ -300,212 +300,150 @@ function quickSort(data){
 
 console.log(quickSort(data));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Search, Insert, and Delete in an Unsorted Array
 
 // search array
 
-// let data = [1,2,3,4,5,6,7,8,9,10];
-// let n = data.length;
-// let key = 8;
+let data = [1,2,3,4,5,6,7,8,9,10];
+let n = data.length;
+let key = 8;
 
-// function searchArray(data,n,key){
-//     for(let i=0; i<n; i++){
-//         if(data[i]==key){
-//             return i;
-//         };
-//     }
-//     return -1
-// }
+function searchArray(data,n,key){
+    for(let i=0; i<n; i++){
+        if(data[i]==key){
+            return i;
+        };
+    }
+    return -1
+}
 
-// console.log(searchArray(data,n,key));
+console.log(searchArray(data,n,key));
 
 // insert 
 
-// let data=[10,20,30,40,50];
-// let n = data.length;
-// let key = 60;
-// let index = 4;
+let data=[10,20,30,40,50];
+let n = data.length;
+let key = 60;
+let index = 4;
 
-// function insert(data,n,key,index){
-//     if(n>=index){
-//         data[index] = key;
-//         return 1;   // if value inserted 
-//     }
+function insert(data,n,key,index){
+    if(n>=index){
+        data[index] = key;
+        return 1;   // if value inserted 
+    }
 
-//     return 0;   // if value not inserted 
-// }
+    return 0;   // if value not inserted 
+}
 
-// console.log(insert(data,n,key,index));
+console.log(insert(data,n,key,index));
 
 
 // delection
 
-// let data= [10,20,30,40,50,60];
-// let n = data.length;
-// let position = 4;
+let data= [10,20,30,40,50,60];
+let n = data.length;
+let position = 4;
 
-// function delection(data,n,position){
-//     for(let i=position; i<n-1; i++){
-//         data[i] = data[i+1];
-//     }
-//     data.length = data.length-1;    
-// }
+function delection(data,n,position){
+    for(let i=position; i<n-1; i++){
+        data[i] = data[i+1];
+    }
+    data.length = data.length-1;    
+}
 
-// delection(data,n,position);
-// console.log(data);
+delection(data,n,position);
+console.log(data);
 
-//Search, Insert, and Delete in an Sorted Array 
+// Search, Insert, and Delete in an Sorted Array 
 
 // search opearation 
 // binary search
 
-// let data = [10,20,30,40,50,60,70,80,90,100];
-// let start = 0;
-// let end = data.length-1;
-// let key = 30;
+let data = [10,20,30,40,50,60,70,80,90,100];
+let start = 0;
+let end = data.length-1;
+let key = 30;
 
-// function binarySearch(key,start,end){
-//     if(start>end){
-//         return "Not Found";
-//     }
-//     mid = Math.floor((start+end)/2);
-//     if(data[mid]===key){
-//         return mid;
-//     }
-//     if(data[mid]>key){
-//         return binarySearch(key,start,mid-1);
-//     }
-//     if(data[mid]<key){
-//         return binarySearch(key,mid+1,end);
-//     }
-// }
+function binarySearch(key,start,end){
+    if(start>end){
+        return "Not Found";
+    }
+    mid = Math.floor((start+end)/2);
+    if(data[mid]===key){
+        return mid;
+    }
+    if(data[mid]>key){
+        return binarySearch(key,start,mid-1);
+    }
+    if(data[mid]<key){
+        return binarySearch(key,mid+1,end);
+    }
+}
 
-// console.log(binarySearch(key,start,end));
+console.log(binarySearch(key,start,end));
 
 
 // insertion 
 
-// let data = new Array(7);
-// data[0] = 10;
-// data[1] = 20;
-// data[2] = 30;
-// data[3] = 40;
-// data[4] = 50;
-// data[5] = 60;
+let data = new Array(7);
+data[0] = 10;
+data[1] = 20;
+data[2] = 30;
+data[3] = 40;
+data[4] = 50;
+data[5] = 60;
 
-// let n = data.length-1;
-// let position = 3;
-// let key = 32;
+let n = data.length-1;
+let position = 3;
+let key = 32;
 
-// function insertion(data,n,position,key){
-//     j = n;
-//     while(j>=position){
-//         data[j+1] = data[j];
-//         j--;
-//     }
-//     data[position] = key;
-//     n = n+1;
-// }
+function insertion(data,n,position,key){
+    j = n;
+    while(j>=position){
+        data[j+1] = data[j];
+        j--;
+    }
+    data[position] = key;
+    n = n+1;
+}
 
-// insertion(data,n,position,key)
-// console.log(data);
+insertion(data,n,position,key)
+console.log(data);
 
 // delection
 
-// let data = [3,4,9,14,19,25,34,45,50,67,71,89,90];
-// let start = 0;
-// let end = data.length-1;
-// let key = 45;
-// let n = 12;
+let data = [3,4,9,14,19,25,34,45,50,67,71,89,90];
+let start = 0;
+let end = data.length-1;
+let key = 45;
+let n = 12;
 
-// function binarySearch(data,key,start,end){
-//     if(start>end){
-//         return -1;
-//     }
-//     mid = Math.floor((start+end)/2);
-//     if(data[mid]===key){
-//         return mid;
-//     }
-//     if(data[mid]>key){
-//         return binarySearch(data,key,start,mid-1)
-//     }
-//     if(data[mid]<key){
-//         return binarySearch(data,key,mid+1,end);
-//     }    
-// }
+function binarySearch(data,key,start,end){
+    if(start>end){
+        return -1;
+    }
+    mid = Math.floor((start+end)/2);
+    if(data[mid]===key){
+        return mid;
+    }
+    if(data[mid]>key){
+        return binarySearch(data,key,start,mid-1)
+    }
+    if(data[mid]<key){
+        return binarySearch(data,key,mid+1,end);
+    }    
+}
 
-// function delection(data){
-//     let position = binarySearch(data,key,0,n-1);
-//     if(position == -1){
-//         return "position not found";
-//     }
-//     for(let i=position; i<data.length-1; i++){
-//         data[i] = data[i+1];
-//     }
-//     return n-1;
-// }
+function delection(data){
+    let position = binarySearch(data,key,0,n-1);
+    if(position == -1){
+        return "position not found";
+    }
+    for(let i=position; i<data.length-1; i++){
+        data[i] = data[i+1];
+    }
+    return n-1;
+}
 
-// delection(data)
-// console.log(data);
+delection(data)
+console.log(data);
